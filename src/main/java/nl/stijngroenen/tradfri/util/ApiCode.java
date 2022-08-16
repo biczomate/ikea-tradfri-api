@@ -18,6 +18,7 @@ package nl.stijngroenen.tradfri.util;
 
 /**
  * The class that contains constants to find codes for the properties in the requests and responses for the IKEA TRÅDFRI API
+ *
  * @author Stijn Groenen
  * @version 1.0.0
  */
@@ -25,6 +26,7 @@ public class ApiCode {
 
     /**
      * Construct the ApiCode class
+     *
      * @since 1.0.0
      */
     private ApiCode() {

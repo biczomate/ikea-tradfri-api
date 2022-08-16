@@ -24,6 +24,7 @@ import nl.stijngroenen.tradfri.util.ApiCode;
 
 /**
  * The class that contains the payload for a request to update a IKEA TRÅDFRI device
+ *
  * @author Stijn Groenen
  * @version 1.0.0
  */
@@ -44,13 +45,15 @@ public class DeviceRequest {
 
     /**
      * Construct the DeviceRequest class
+     *
      * @since 1.0.0
      */
-    public DeviceRequest(){
+    public DeviceRequest() {
     }
 
     /**
      * Get the new properties of the light (if the device is a light)
+     *
      * @return The new properties of the light
      * @since 1.0.0
      */
@@ -60,6 +63,7 @@ public class DeviceRequest {
 
     /**
      * Get the new properties of the plug (if the device is a plug)
+     *
      * @return The new properties of the plug
      * @since 1.0.0
      */
@@ -69,6 +73,7 @@ public class DeviceRequest {
 
     /**
      * Set the new properties of the light (if the device is a light)
+     *
      * @param lightProperties The new properties of the light
      * @since 1.0.0
      */
@@ -78,6 +83,7 @@ public class DeviceRequest {
 
     /**
      * Set the new properties of the plug (if the device is a plug)
+     *
      * @param plugProperties The new properties of the plug
      * @since 1.0.0
      */

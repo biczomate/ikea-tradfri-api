@@ -30,6 +30,7 @@ import java.util.HashMap;
 
 /**
  * The class that observes an IKEA TRÅDFRI gateway to automagically detect changes
+ *
  * @author Stijn Groenen
  * @version 1.0.0
  */
@@ -38,7 +39,7 @@ public class GatewayObserver extends Observer {
     /**
      * The IKEA TRÅDFRI gateway to observe
      */
-    private Gateway gateway;
+    private final Gateway gateway;
 
     /**
      * A cache of the devices registered to the IKEA TRÅDFRI gateway
@@ -48,11 +49,12 @@ public class GatewayObserver extends Observer {
     /**
      * An object mapper used for mapping JSON responses from the IKEA TRÅDFRI gateway to Java classes
      */
-    private ObjectMapper objectMapper;
+    private final ObjectMapper objectMapper;
 
     /**
      * Construct the GatewayObserver class
-     * @param gateway The IKEA TRÅDFRI gateway to observe
+     *
+     * @param gateway    The IKEA TRÅDFRI gateway to observe
      * @param coapClient A CoAP client that can be used to communicate with the device using the IKEA TRÅDFRI gateway
      * @since 1.0.0
      */
@@ -64,14 +66,15 @@ public class GatewayObserver extends Observer {
 
     /**
      * Start observing the gateway to automagically detect changes
+     *
      * @return True if successfully started observing, false if not
      * @since 1.0.0
      */
     @Override
-    public boolean start(){
+    public boolean start() {
         Device[] devices = gateway.getDevices();
         this.devices = new HashMap<>();
-        for(Device device: devices){
+        for (Device device : devices) {
             this.devices.put(device.getInstanceId(), device);
         }
         return super.start();
@@ -79,6 +82,7 @@ public class GatewayObserver extends Observer {
 
     /**
      * Handles a new response from the CoAP client and calls the appropriate event handlers for the IKEA TRÅDFRI gateway
+     *
      * @param payload The payload of the response to the CoAP request
      * @since 1.0.0
      */
@@ -119,7 +123,6 @@ public class GatewayObserver extends Observer {
         } catch (JsonProcessingException ignored) {
         }
     }
-
 
 
 }

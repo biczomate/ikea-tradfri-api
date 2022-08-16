@@ -2,6 +2,7 @@ package nl.stijngroenen.tradfri.device;
 
 /**
  * The enumerator that contains IKEA TRÅDFRI device types
+ *
  * @author Stijn Groenen
  * @version 1.1.0
  */

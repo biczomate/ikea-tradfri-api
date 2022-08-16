@@ -24,12 +24,13 @@ import nl.stijngroenen.tradfri.util.ApiCode;
 
 /**
  * The class that contains the properties of an IKEA TRÅDFRI light
+ *
  * @author Stijn Groenen
  * @version 1.0.0
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class LightProperties extends DeviceProperties{
+public class LightProperties extends DeviceProperties {
 
     /**
      * The on state of the light (true for on, false for off)
@@ -88,13 +89,15 @@ public class LightProperties extends DeviceProperties{
 
     /**
      * Construct the LightProperties class
+     *
      * @since 1.0.0
      */
-    public LightProperties(){
+    public LightProperties() {
     }
 
     /**
      * Get the on state of the light
+     *
      * @return The on state of the light (true for on, false for off)
      * @since 1.0.0
      */
@@ -104,6 +107,7 @@ public class LightProperties extends DeviceProperties{
 
     /**
      * Get the brightness of the light
+     *
      * @return The brightness of the light
      * @since 1.0.0
      */
@@ -113,6 +117,7 @@ public class LightProperties extends DeviceProperties{
 
     /**
      * Get the colour of the light in hexadecimals
+     *
      * @return The colour of the light in hexadecimals
      * @since 1.0.0
      */
@@ -122,6 +127,7 @@ public class LightProperties extends DeviceProperties{
 
     /**
      * Get the hue of the light
+     *
      * @return The hue of the light
      * @since 1.0.0
      */
@@ -131,6 +137,7 @@ public class LightProperties extends DeviceProperties{
 
     /**
      * Get the saturation of the light
+     *
      * @return The saturation of the light
      * @since 1.0.0
      */
@@ -140,6 +147,7 @@ public class LightProperties extends DeviceProperties{
 
     /**
      * Get the X value of the colour of the light
+     *
      * @return The X value of the colour of the light
      * @since 1.0.0
      */
@@ -149,6 +157,7 @@ public class LightProperties extends DeviceProperties{
 
     /**
      * Get the Y value of the colour of the light
+     *
      * @return The Y value of the colour of the light
      * @since 1.0.0
      */
@@ -158,6 +167,7 @@ public class LightProperties extends DeviceProperties{
 
     /**
      * Get the colour temperature of the light
+     *
      * @return The colour temperature of the light
      * @since 1.0.0
      */
@@ -167,6 +177,7 @@ public class LightProperties extends DeviceProperties{
 
     /**
      * Get the transition time for updating the light
+     *
      * @return The transition time for updating the light
      * @since 1.0.0
      */
@@ -177,6 +188,7 @@ public class LightProperties extends DeviceProperties{
     /**
      * Set the on state of the light within the LightProperties class<br>
      * <i>Note: This does not change the actual light</i>
+     *
      * @param on The new on state for the light (true for on, false for off)
      * @since 1.0.0
      */
@@ -187,6 +199,7 @@ public class LightProperties extends DeviceProperties{
     /**
      * Set the brightness of the light within the LightProperties class<br>
      * <i>Note: This does not change the actual light</i>
+     *
      * @param brightness The new brightness for the light
      * @since 1.0.0
      */
@@ -202,6 +215,7 @@ public class LightProperties extends DeviceProperties{
      *     <li>RGB: {@link nl.stijngroenen.tradfri.util.ColourHex}</li>
      *     <li>Colour temperatures: {@link nl.stijngroenen.tradfri.util.ColourTemperatureHex}</li>
      * </ul>
+     *
      * @param colourHex The new colour for the light
      * @since 1.0.0
      */
@@ -212,6 +226,7 @@ public class LightProperties extends DeviceProperties{
     /**
      * Set the hue of the light within the LightProperties class<br>
      * <i>Note: This does not change the actual light</i>
+     *
      * @param hue The new hue for the light
      * @since 1.0.0
      */
@@ -222,6 +237,7 @@ public class LightProperties extends DeviceProperties{
     /**
      * Set the saturation of the light within the LightProperties class<br>
      * <i>Note: This does not change the actual light</i>
+     *
      * @param saturation The new saturation for the light
      * @since 1.0.0
      */
@@ -232,6 +248,7 @@ public class LightProperties extends DeviceProperties{
     /**
      * Set the X value of the colour of the light within the LightProperties class<br>
      * <i>Note: This does not change the actual light</i>
+     *
      * @param colourX The X value of the new colour for the light
      * @since 1.0.0
      */
@@ -242,6 +259,7 @@ public class LightProperties extends DeviceProperties{
     /**
      * Set the Y value of the colour of the light within the LightProperties class<br>
      * <i>Note: This does not change the actual light</i>
+     *
      * @param colourY The Y value of the new colour for the light
      * @since 1.0.0
      */
@@ -252,6 +270,7 @@ public class LightProperties extends DeviceProperties{
     /**
      * Set the colour temperature of the light within the LightProperties class<br>
      * <i>Note: This does not change the actual light</i>
+     *
      * @param colourTemperature The new colour temperature for the light
      * @since 1.0.0
      */
@@ -262,6 +281,7 @@ public class LightProperties extends DeviceProperties{
     /**
      * Set the transition time for updating the light within the LightProperties class<br>
      * <i>Note: This does not change the actual light</i>
+     *
      * @param transitionTime The new transition time for updating the light
      * @since 1.0.0
      */

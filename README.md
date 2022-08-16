@@ -8,22 +8,19 @@ ikea-tradfri-api is a Java library for communicating with IKEA TRÅDFRI devices.
 
 ## Features
 
- - Register a new client to the IKEA TRÅDFRI gateway
- - Get a list of all devices connected to the IKEA TRÅDFRI gateway
- - Get the current state of a light
- - Change the state of a light (on / off, brightness, colour, etc.)
- - Get the current state of a plug
- - Change the state of a plug (on / off)
- - Events to automatically detect changes for devices
- - Support for RGB colours for lights
-
-
+- Register a new client to the IKEA TRÅDFRI gateway
+- Get a list of all devices connected to the IKEA TRÅDFRI gateway
+- Get the current state of a light
+- Change the state of a light (on / off, brightness, colour, etc.)
+- Get the current state of a plug
+- Change the state of a plug (on / off)
+- Events to automatically detect changes for devices
+- Support for RGB colours for lights
 
 ## Installation
 
-If possible, always try to use the latest version of this library for your application. The latest version can be found on the Maven Central repository and on the GitHub Releases page.
-
-
+If possible, always try to use the latest version of this library for your application. The latest version can be found
+on the Maven Central repository and on the GitHub Releases page.
 
 ### Maven
 
@@ -37,8 +34,6 @@ To install this library using Maven, add the following dependency to your POM fi
 </dependency>
 ```
 
-
-
 ### Gradle
 
 To install this library using Gradle, add the following dependency to your build file:
@@ -47,39 +42,37 @@ To install this library using Gradle, add the following dependency to your build
 implementation 'nl.stijngroenen.tradfri:ikea-tradfri-api:1.2.0'
 ```
 
-
-
 ### JAR
 
-If you are not using a dependency management system (like Maven or Gradle), you could also add the standalone JAR file to your classpath. The JAR file can be downloaded from the Maven Central repository or from the GitHub Releases page. Make sure to also add the [dependencies](#built-with) to your classpath.
-
-
+If you are not using a dependency management system (like Maven or Gradle), you could also add the standalone JAR file
+to your classpath. The JAR file can be downloaded from the Maven Central repository or from the GitHub Releases page.
+Make sure to also add the [dependencies](#built-with) to your classpath.
 
 ## How To Use
 
 ### Connect to an IKEA TRÅDFRI gateway for the first time
 
 Import the Gateway class and the Credentials class:
+
 ```Java
 import nl.stijngroenen.tradfri.device.Gateway;
 import nl.stijngroenen.tradfri.util.Credentials;
 ```
 
 Replace 'IP_OF_THE_GATEWAY' with the IP-address of the IKEA TRÅDFRI gateway.  
-Replace 'SECURITY_CODE' with the security code of the IKEA TRÅDFRI gateway. The security code can be found on the bottom of the IKEA TRÅDFRI gateway.  
+Replace 'SECURITY_CODE' with the security code of the IKEA TRÅDFRI gateway. The security code can be found on the bottom
+of the IKEA TRÅDFRI gateway.
 
 The connect function returns credentials. These credentials can later be to to connect to the gateway again.  
 Please store these credentials (identity and key) securely.  
 The credentials expire after 6 weeks of inactivity.
 
 ```Java
-Gateway gateway = new Gateway("IP_OF_THE_GATEWAY");
-Credentials credentials = gateway.connect("SECURITY_CODE");
-String identity = credentials.getIdentity();
-String key = credentials.getKey();
+Gateway gateway=new Gateway("IP_OF_THE_GATEWAY");
+    Credentials credentials=gateway.connect("SECURITY_CODE");
+    String identity=credentials.getIdentity();
+    String key=credentials.getKey();
 ```
-
-
 
 ### Connect to an IKEA TRÅDFRI gateway using credentials
 
@@ -94,12 +87,10 @@ Replace 'IP_OF_THE_GATEWAY' with the IP-address of the IKEA TRÅDFRI gateway.
 Replace 'IDENTITY' and 'KEY' with the identity and key returned when connecting for the first time.
 
 ```Java
-Gateway gateway = new Gateway("IP_OF_THE_GATEWAY");
-Credentials credentials = new Credentials("IDENTITY", "KEY");
-gateway.connect(credentials);
+Gateway gateway=new Gateway("IP_OF_THE_GATEWAY");
+    Credentials credentials=new Credentials("IDENTITY","KEY");
+    gateway.connect(credentials);
 ```
-
-
 
 ### Get a list of all devices connected to the IKEA TRÅDFRI gateway
 
@@ -114,8 +105,6 @@ Get all devices connected to the IKEA TRÅDFRI gateway:
 ```Java
 Device[] devices = gateway.getDevices();
 ```
-
-
 
 ### Get a device by id
 
@@ -132,8 +121,6 @@ Replace 'ID' with the id of the device.
 Device device = gateway.getDevice(ID);
 ```
 
-
-
 ### Working with lights
 
 #### Change a property of a light
@@ -149,14 +136,12 @@ Change a property of a light:
 Replace 'ID' with the id of the light.
 
 ```Java
-Device device = gateway.getDevice(ID);
-if(device.isLight()){
-    Light light = device.toLight();
+Device device=gateway.getDevice(ID);
+    if(device.isLight()){
+    Light light=device.toLight();
     light.setBrightness(128);
-}
+    }
 ```
-
-
 
 #### Change multiple properties of a light
 
@@ -172,17 +157,15 @@ Change a property of a light:
 Replace 'ID' with the id of the light.
 
 ```Java
-Device device = gateway.getDevice(ID);
-if(device.isLight()){
-    Light light = device.toLight();
+Device device=gateway.getDevice(ID);
+    if(device.isLight()){
+    Light light=device.toLight();
     light.updateOn(true);
     light.updateBrightness(128);
     light.updateColourHex(ColourHex.BLUE);
     light.applyUpdates();
-}
+    }
 ```
-
-
 
 #### Turn on all the lights
 
@@ -196,16 +179,14 @@ import nl.stijngroenen.tradfri.device.Light;
 Turn on all the lights:
 
 ```Java
-Device[] devices = gateway.getDevices();
-for(Device device: devices){
+Device[]devices=gateway.getDevices();
+    for(Device device:devices){
     if(device.isLight()){
-        Light light = device.toLight();
-        light.setOn(true);
+    Light light=device.toLight();
+    light.setOn(true);
     }
-}
+    }
 ```
-
-
 
 ### Working with plugs
 
@@ -222,14 +203,12 @@ Turn on a plug:
 Replace 'ID' with the id of the plug.
 
 ```Java
-Device device = gateway.getDevice(ID);
-if(device.isPlug()){
-    Plug plug = device.toPlug();
+Device device=gateway.getDevice(ID);
+    if(device.isPlug()){
+    Plug plug=device.toPlug();
     plug.setOn(true);
-}
+    }
 ```
-
-
 
 ### Working with events
 
@@ -256,8 +235,6 @@ if(device.isPlug()){
 |             | PlugChangeEvent                    | The plug changed                                  |
 |             | PlugChangeOnEvent                  | The on / off state of the light changed           |
 
-
-
 #### Add an event handler to the IKEA TRÅDFRI gateway
 
 Import the EventHandler class and the DeviceAddedEvent class:
@@ -270,17 +247,15 @@ import nl.stijngroenen.tradfri.device.event.DeviceAddedEvent;
 A new device is added to the IKEA TRÅDFRI gateway:
 
 ```Java
-EventHandler<DeviceAddedEvent> eventHandler = new EventHandler<DeviceAddedEvent>() {
-    @Override
-    public void handle(DeviceAddedEvent event){
-        System.out.println("A new device is added: "+event.getDevice().getName());
+EventHandler<DeviceAddedEvent> eventHandler=new EventHandler<DeviceAddedEvent>(){
+@Override
+public void handle(DeviceAddedEvent event){
+    System.out.println("A new device is added: "+event.getDevice().getName());
     }
-};
-gateway.enableObserve(); // This is necessary for the event handler to work.
-gateway.addEventHandler(eventHandler);
+    };
+    gateway.enableObserve(); // This is necessary for the event handler to work.
+    gateway.addEventHandler(eventHandler);
 ```
-
-
 
 #### Add an event handler to a device
 
@@ -296,18 +271,16 @@ Change a property of a light:
 Replace 'ID' with the id of the light.
 
 ```Java
-Device device = gateway.getDevice(ID);
-EventHandler<LightChangeOnEvent> eventHandler = new EventHandler<LightChangeOnEvent>() {
-    @Override
-    public void handle(LightChangeOnEvent event){
-        System.out.println("The light is "+(event.getNewOn() ? "on" : "off"));
+Device device=gateway.getDevice(ID);
+    EventHandler<LightChangeOnEvent> eventHandler=new EventHandler<LightChangeOnEvent>(){
+@Override
+public void handle(LightChangeOnEvent event){
+    System.out.println("The light is "+(event.getNewOn()?"on":"off"));
     }
-};
-device.enableObserve(); // This is necessary for the event handler to work.
-device.addEventHandler(eventHandler);
+    };
+    device.enableObserve(); // This is necessary for the event handler to work.
+    device.addEventHandler(eventHandler);
 ```
-
-
 
 ## Built With
 
@@ -315,21 +288,17 @@ device.addEventHandler(eventHandler);
 * [Jackson Databind](https://github.com/FasterXML/jackson-databind) - Library for parsing and serializing JSON
 * [Maven](https://maven.apache.org/) - Dependency Management
 
-
-
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/StijnGroenen/ikea-tradfri-api/tags). 
-
-
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see
+the [tags on this repository](https://github.com/StijnGroenen/ikea-tradfri-api/tags).
 
 ## Authors
 
 * **Stijn Groenen** - *Initial work* - [GitHub](https://github.com/StijnGroenen)
 
-See also the list of [contributors](https://github.com/StijnGroenen/ikea-tradfri-api/contributors) who participated in this project.
-
-
+See also the list of [contributors](https://github.com/StijnGroenen/ikea-tradfri-api/contributors) who participated in
+this project.
 
 ## License
 

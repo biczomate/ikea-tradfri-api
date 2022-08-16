@@ -18,6 +18,7 @@ package nl.stijngroenen.tradfri.util;
 
 /**
  * The class that contains helper functions and constants to find CoAP endpoints for the IKEA TRÅDFRI gateway
+ *
  * @author Stijn Groenen
  * @version 1.0.0
  */
@@ -30,6 +31,7 @@ public class ApiEndpoint {
 
     /**
      * Construct the ApiEndpoint class
+     *
      * @since 1.0.0
      */
     private ApiEndpoint() {
@@ -37,6 +39,7 @@ public class ApiEndpoint {
 
     /**
      * Get the IP-address of the IKEA TRÅDFRI gateway
+     *
      * @return The IP-address of the IKEA TRÅDFRI gateway
      * @since 1.0.0
      */
@@ -46,30 +49,33 @@ public class ApiEndpoint {
 
     /**
      * Set the IP-address of the IKEA TRÅDFRI gateway
+     *
      * @param ip The IP-address of the IKEA TRÅDFRI gateway
      * @since 1.0.0
      */
-    public static void setGatewayIp(String ip){
+    public static void setGatewayIp(String ip) {
         gatewayIp = ip;
     }
 
     /**
      * Get the base URL of the IKEA TRÅDFRI API
+     *
      * @return The base URL of the IKEA TRÅDFRI API
      * @since 1.0.0
      */
-    public static String getBaseUrl(){
-        return "coaps://"+gatewayIp+":5684";
+    public static String getBaseUrl() {
+        return "coaps://" + gatewayIp + ":5684";
     }
 
     /**
      * Get the URI of an endpoint of the IKEA TRÅDFRI API
+     *
      * @param endpoint The endpoint paths
      * @return The URI of the endpoint of the IKEA TRÅDFRI API
      * @since 1.0.0
      */
-    public static String getUri(String... endpoint){
-        return getBaseUrl()+"/"+String.join("/", endpoint);
+    public static String getUri(String... endpoint) {
+        return getBaseUrl() + "/" + String.join("/", endpoint);
     }
 
     // Gateway

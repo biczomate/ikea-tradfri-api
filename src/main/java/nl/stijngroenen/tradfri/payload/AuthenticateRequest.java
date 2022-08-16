@@ -22,6 +22,7 @@ import nl.stijngroenen.tradfri.util.ApiCode;
 
 /**
  * The class that contains the payload for a request to authenticate to the IKEA TRÅDFRI gateway
+ *
  * @author Stijn Groenen
  * @version 1.0.0
  */
@@ -36,13 +37,15 @@ public class AuthenticateRequest {
 
     /**
      * Construct the AuthenticateRequest class
+     *
      * @since 1.0.0
      */
-    public AuthenticateRequest(){
+    public AuthenticateRequest() {
     }
 
     /**
      * Get the identity of the client to register to the IKEA TRÅDFRI gateway
+     *
      * @return The identity of the client to register to the IKEA TRÅDFRI gateway
      * @since 1.0.0
      */
@@ -52,6 +55,7 @@ public class AuthenticateRequest {
 
     /**
      * Set the identity of the client to register to the IKEA TRÅDFRI gateway
+     *
      * @param identity The new identity of the client to register to the IKEA TRÅDFRI gateway
      * @since 1.0.0
      */

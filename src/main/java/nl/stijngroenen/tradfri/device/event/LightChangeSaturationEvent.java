@@ -21,6 +21,7 @@ import nl.stijngroenen.tradfri.device.LightProperties;
 
 /**
  * The class that represents a light saturation changed event that occurred to an IKEA TRÅDFRI light
+ *
  * @author Stijn Groenen
  * @version 1.0.0
  */
@@ -28,7 +29,8 @@ public class LightChangeSaturationEvent extends LightChangeEvent {
 
     /**
      * Construct the LightChangeSaturationEvent class
-     * @param light The light for which the event occurred
+     *
+     * @param light         The light for which the event occurred
      * @param oldProperties The old properties of the light (from before the event occurred)
      * @param newProperties The new properties of the light (from after the event occurred)
      * @since 1.0.0
@@ -39,19 +41,21 @@ public class LightChangeSaturationEvent extends LightChangeEvent {
 
     /**
      * Get the old saturation of the light (from before the event occurred)
+     *
      * @return The old saturation of the light
      * @since 1.0.0
      */
-    public int getOldSaturation(){
+    public int getOldSaturation() {
         return getOldProperties().getSaturation();
     }
 
     /**
      * Get the new saturation of the light (from after the event occurred)
+     *
      * @return The new saturation of the light
      * @since 1.0.0
      */
-    public int getNewSaturation(){
+    public int getNewSaturation() {
         return getNewProperties().getSaturation();
     }
 

@@ -20,6 +20,7 @@ import nl.stijngroenen.tradfri.device.Gateway;
 
 /**
  * The class that represents an event that occurred to an IKEA TRÅDFRI gateway
+ *
  * @author Stijn Groenen
  * @version 1.0.0
  */
@@ -28,10 +29,11 @@ public class GatewayEvent extends Event {
     /**
      * The IKEA TRÅDFRI gateway for which the event occurred
      */
-    private Gateway gateway;
+    private final Gateway gateway;
 
     /**
      * Construct the GatewayEvent class
+     *
      * @param gateway The IKEA TRÅDFRI gateway for which the event occurred
      * @since 1.0.0
      */
@@ -42,10 +44,11 @@ public class GatewayEvent extends Event {
 
     /**
      * Get the IKEA TRÅDFRI gateway for which the event occurred
+     *
      * @return The IKEA TRÅDFRI gateway for which the event occurred
      * @since 1.0.0
      */
-    public Gateway getGateway(){
+    public Gateway getGateway() {
         return this.gateway;
     }
 

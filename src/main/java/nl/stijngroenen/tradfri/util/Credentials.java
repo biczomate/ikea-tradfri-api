@@ -18,6 +18,7 @@ package nl.stijngroenen.tradfri.util;
 
 /**
  * The class that contains the credentials used to authenticate to the IKEA TRÅDFRI gateway
+ *
  * @author Stijn Groenen
  * @version 1.0.0
  */
@@ -35,8 +36,9 @@ public class Credentials {
 
     /**
      * Construct the Credentials class
+     *
      * @param identity The identity that can be used to authenticate to the IKEA TRÅDFRI gateway
-     * @param key The key that can be used to authenticate to the IKEA TRÅDFRI gateway
+     * @param key      The key that can be used to authenticate to the IKEA TRÅDFRI gateway
      * @since 1.0.0
      */
     public Credentials(String identity, String key) {
@@ -46,6 +48,7 @@ public class Credentials {
 
     /**
      * Construct the Credentials class
+     *
      * @since 1.0.0
      */
     public Credentials() {
@@ -53,6 +56,7 @@ public class Credentials {
 
     /**
      * Get the identity that can be used to authenticate to the IKEA TRÅDFRI gateway
+     *
      * @return The identity that can be used to authenticate to the IKEA TRÅDFRI gateway
      * @since 1.0.0
      */
@@ -62,6 +66,7 @@ public class Credentials {
 
     /**
      * Get the key that can be used to authenticate to the IKEA TRÅDFRI gateway
+     *
      * @return The key that can be used to authenticate to the IKEA TRÅDFRI gateway
      * @since 1.0.0
      */
@@ -71,6 +76,7 @@ public class Credentials {
 
     /**
      * Set the identity that can be used to authenticate to the IKEA TRÅDFRI gateway
+     *
      * @param identity The new identity that can be used to authenticate to the IKEA TRÅDFRI gateway
      * @since 1.0.0
      */
@@ -80,6 +86,7 @@ public class Credentials {
 
     /**
      * Set the key that can be used to authenticate to the IKEA TRÅDFRI gateway
+     *
      * @param key The new key that can be used to authenticate to the IKEA TRÅDFRI gateway
      * @since 1.0.0
      */
