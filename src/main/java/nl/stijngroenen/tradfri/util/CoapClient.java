@@ -16,7 +16,6 @@
 
 package nl.stijngroenen.tradfri.util;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import nl.stijngroenen.tradfri.exception.CoapClientException;
 import org.eclipse.californium.core.CoapHandler;
@@ -125,11 +124,6 @@ public class CoapClient {
         dtlsEndpoint.start();
     }
 
-    private void reconnect() {
-        dtlsEndpoint.stop();
-        dtlsEndpoint.stop();
-    }
-
     /**
      * Get timeout for connections between the CoAP client and the IKEA TRÅDFRI gateway (in milliseconds)
      *
@@ -166,7 +160,7 @@ public class CoapClient {
             request.send();
             Response response = request.waitForResponse(timeout);
             if (response == null) {
-                reconnect();
+                updateDtlsConnector();
                 response = request.waitForResponse(timeout);
             }
             String responsePayload = response.getPayloadString();
@@ -177,7 +171,7 @@ public class CoapClient {
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             return null;
-        } catch (JsonProcessingException e) {
+        } catch (IOException e) {
             throw new CoapClientException(e);
         }
     }
