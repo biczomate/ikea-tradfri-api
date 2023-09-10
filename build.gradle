@@ -1,0 +1,28 @@
+plugins {
+    id 'java-library'
+    id 'checkstyle'
+}
+
+checkstyle {
+    toolVersion "10.2"
+}
+
+group = 'com.github.biczomate'
+version = '1.3.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.eclipse.californium:californium-core:3.6.0'
+    implementation 'org.eclipse.californium:scandium:3.6.0'
+    implementation 'org.apache.commons:commons-lang3:3.9'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.10.2'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    javaCompiler = javaToolchains.compilerFor {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+}
