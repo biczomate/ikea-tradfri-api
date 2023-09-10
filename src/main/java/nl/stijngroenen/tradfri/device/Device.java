@@ -16,12 +16,12 @@
 
 package nl.stijngroenen.tradfri.device;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import nl.stijngroenen.tradfri.device.event.EventHandler;
 import nl.stijngroenen.tradfri.util.ApiEndpoint;
 import nl.stijngroenen.tradfri.util.CoapClient;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * The class that represents an IKEA TRÅDFRI device

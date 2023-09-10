@@ -16,6 +16,8 @@
 
 package nl.stijngroenen.tradfri.device;
 
+import java.util.ArrayList;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import nl.stijngroenen.tradfri.device.event.DeviceEvent;
@@ -39,8 +41,6 @@ import nl.stijngroenen.tradfri.device.event.PlugEvent;
 import nl.stijngroenen.tradfri.device.event.RemoteEvent;
 import nl.stijngroenen.tradfri.payload.DeviceResponse;
 import nl.stijngroenen.tradfri.util.CoapClient;
-
-import java.util.ArrayList;
 
 /**
  * The class that observes a device to automagically detect changes
@@ -118,7 +118,8 @@ public class DeviceObserver extends Observer {
                     || checkChanges(oldProperties.getColourY(), newProperties.getColourY())) {
                     changeEvents.add(new LightChangeColourXYEvent(device.toLight(), oldProperties, newProperties));
                 }
-                if (checkChanges(oldProperties.getColourX(), newProperties.getColourX()) || checkChanges(oldProperties.getColourY(), newProperties.getColourY()) || checkChanges(oldProperties.getHue(), newProperties.getHue()) || checkChanges(oldProperties.getSaturation(), newProperties.getSaturation())) {
+                if (checkChanges(oldProperties.getColourX(), newProperties.getColourX()) || checkChanges(oldProperties.getColourY(), newProperties.getColourY()) ||
+                        checkChanges(oldProperties.getHue(), newProperties.getHue()) || checkChanges(oldProperties.getSaturation(), newProperties.getSaturation())) {
                     changeEvents.add(new LightChangeColourEvent(device.toLight(), oldProperties, newProperties));
                 }
                 if (checkChanges(oldProperties.getColourTemperature(), newProperties.getColourTemperature())) {

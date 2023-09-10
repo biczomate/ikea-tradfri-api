@@ -1,15 +1,15 @@
 package nl.stijngroenen.tradfri.payload;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import nl.stijngroenen.tradfri.device.GroupProperties;
 import nl.stijngroenen.tradfri.util.ApiCode;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 
 /**
  * The class that contains the payload for a response of an IKEA TRÅDFRI group

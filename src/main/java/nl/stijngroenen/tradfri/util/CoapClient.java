@@ -16,6 +16,9 @@
 
 package nl.stijngroenen.tradfri.util;
 
+import java.io.IOException;
+import java.net.InetSocketAddress;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import nl.stijngroenen.tradfri.exception.CoapClientException;
 import org.eclipse.californium.core.CoapHandler;
@@ -30,9 +33,6 @@ import org.eclipse.californium.elements.config.Configuration;
 import org.eclipse.californium.scandium.DTLSConnector;
 import org.eclipse.californium.scandium.config.DtlsConnectorConfig;
 import org.eclipse.californium.scandium.dtls.pskstore.AdvancedSinglePskStore;
-
-import java.io.IOException;
-import java.net.InetSocketAddress;
 
 /**
  * The class that is used to communicate with the IKEA TRÅDFRI gateway using the CoAP protocol

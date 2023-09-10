@@ -16,6 +16,9 @@
 
 package nl.stijngroenen.tradfri.device;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import nl.stijngroenen.tradfri.device.event.DeviceAddedEvent;
@@ -24,9 +27,6 @@ import nl.stijngroenen.tradfri.device.event.EventHandler;
 import nl.stijngroenen.tradfri.device.event.GatewayEvent;
 import nl.stijngroenen.tradfri.util.ApiEndpoint;
 import nl.stijngroenen.tradfri.util.CoapClient;
-
-import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  * The class that observes an IKEA TRÅDFRI gateway to automagically detect changes

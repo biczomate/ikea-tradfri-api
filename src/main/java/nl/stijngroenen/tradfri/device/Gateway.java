@@ -16,6 +16,9 @@
 
 package nl.stijngroenen.tradfri.device;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import nl.stijngroenen.tradfri.device.event.EventHandler;
 import nl.stijngroenen.tradfri.payload.AuthenticateRequest;
 import nl.stijngroenen.tradfri.payload.AuthenticateResponse;
@@ -25,9 +28,6 @@ import nl.stijngroenen.tradfri.util.ApiEndpoint;
 import nl.stijngroenen.tradfri.util.CoapClient;
 import nl.stijngroenen.tradfri.util.Credentials;
 import org.apache.commons.lang3.RandomStringUtils;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * The class that is used to communicate with the IKEA TRÅDFRI gateway

@@ -3,12 +3,6 @@
         "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
         "https://checkstyle.org/dtds/suppressions_1_2.dtd">
 <suppressions>
-    <suppress checks="Indentation" files="."/>
-    <suppress checks="LineLength" files="."/>
-    <suppress checks="CustomImportOrder" files="."/>
     <suppress checks="SummaryJavadoc" files="."/>
-    <suppress checks="AbbreviationAsWordInName" files="."/>
     <suppress checks="EmptyCatchBlock" files="."/>
-    <suppress checks="MemberName" files="."/>
-    <suppress checks="LocalVariableName" files="."/>
 </suppressions>

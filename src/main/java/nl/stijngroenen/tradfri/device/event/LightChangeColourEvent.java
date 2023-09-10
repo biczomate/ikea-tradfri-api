@@ -148,7 +148,8 @@ public class LightChangeColourEvent extends LightChangeEvent {
      * @since 1.1.0
      */
     public ColourRGB getOldColourRGB() {
-        return ColourRGB.fromHS(getOldProperties().getHue() != null ? getOldProperties().getHue() : 0, getOldProperties().getSaturation() != null ? getOldProperties().getSaturation() : 0);
+        return ColourRGB.fromHS(getOldProperties().getHue() != null ? getOldProperties().getHue() : 0,
+                getOldProperties().getSaturation() != null ? getOldProperties().getSaturation() : 0);
     }
 
     /**
@@ -158,7 +159,8 @@ public class LightChangeColourEvent extends LightChangeEvent {
      * @since 1.1.0
      */
     public ColourRGB getNewColourRGB() {
-        return ColourRGB.fromHS(getNewProperties().getHue() != null ? getNewProperties().getHue() : 0, getNewProperties().getSaturation() != null ? getNewProperties().getSaturation() : 0);
+        return ColourRGB.fromHS(getNewProperties().getHue() != null ? getNewProperties().getHue() : 0,
+                getNewProperties().getSaturation() != null ? getNewProperties().getSaturation() : 0);
     }
 
 }
