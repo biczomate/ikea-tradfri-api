@@ -24,6 +24,7 @@ import nl.stijngroenen.tradfri.device.Gateway;
 
 /**
  * The class that represents a device added event that occurred to an IKEA TRÅDFRI gateway
+ *
  * @author Stijn Groenen
  * @version 1.0.0
  */
@@ -32,12 +33,13 @@ public class DeviceAddedEvent extends GatewayEvent {
     /**
      * The added device for which the event occurred
      */
-    private Device device;
+    private final Device device;
 
     /**
      * Construct the DeviceAddedEvent class
+     *
      * @param gateway The IKEA TRÅDFRI gateway for which the event occurred
-     * @param device The added device for which the event occurred
+     * @param device  The added device for which the event occurred
      * @since 1.0.0
      */
     public DeviceAddedEvent(Gateway gateway, Device device) {
@@ -47,19 +49,21 @@ public class DeviceAddedEvent extends GatewayEvent {
 
     /**
      * Get the added device for which the event occurred
+     *
      * @return The added device for which the event occurred
      * @since 1.0.0
      */
-    public Device getDevice(){
+    public Device getDevice() {
         return this.device;
     }
 
     /**
      * Get the id of the added device for which the event occurred
+     *
      * @return The id of the added device for which the event occurred
      * @since 1.0.0
      */
-    public int getDeviceId(){
+    public int getDeviceId() {
         return this.device.getInstanceId();
     }
 

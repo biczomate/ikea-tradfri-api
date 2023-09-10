@@ -25,6 +25,7 @@ import nl.stijngroenen.tradfri.util.ApiCode;
 
 /**
  * The class that contains the payload of a response to the authenticate request from the IKEA TRÅDFRI gateway
+ *
  * @author Stijn Groenen
  * @version 1.0.0
  */
@@ -45,13 +46,15 @@ public class AuthenticateResponse {
 
     /**
      * Construct the AuthenticateResponse class
+     *
      * @since 1.0.0
      */
-    public AuthenticateResponse(){
+    public AuthenticateResponse() {
     }
 
     /**
      * Get the preshared key that can be used to authenticate to the IKEA TRÅDFRI gateway
+     *
      * @return The preshared key that can be used to authenticate to the IKEA TRÅDFRI gateway
      * @since 1.0.0
      */
@@ -61,6 +64,7 @@ public class AuthenticateResponse {
 
     /**
      * Get the firmware version of the IKEA TRÅDFRI gateway
+     *
      * @return The firmware version of the IKEA TRÅDFRI gateway
      * @since 1.0.0
      */
@@ -70,6 +74,7 @@ public class AuthenticateResponse {
 
     /**
      * Set the preshared key that can be used to authenticate to the IKEA TRÅDFRI gateway
+     *
      * @param presharedKey The new preshared key that can be used to authenticate to the IKEA TRÅDFRI gateway
      * @since 1.0.0
      */
@@ -79,6 +84,7 @@ public class AuthenticateResponse {
 
     /**
      * Set the firmware version of the IKEA TRÅDFRI gateway
+     *
      * @param gatewayFirmwareVersion The new firmware version of the IKEA TRÅDFRI gateway
      * @since 1.0.0
      */

@@ -21,6 +21,7 @@ package nl.stijngroenen.tradfri.device;
 
 /**
  * The enum that contains the available power sources for an IKEA TRÅDFRI device
+ *
  * @author Stijn Groenen
  * @version 1.0.0
  */

@@ -25,6 +25,7 @@ import nl.stijngroenen.tradfri.util.CoapClient;
 
 /**
  * The class that represents an IKEA TRÅDFRI plug
+ *
  * @author Stijn Groenen
  * @version 1.0.0
  */
@@ -42,15 +43,16 @@ public class Plug extends Device {
 
     /**
      * Construct the Plug class
-     * @param name The name of the plug
+     *
+     * @param name         The name of the plug
      * @param creationDate The creation date of the plug
-     * @param instanceId The instance id of the plug
-     * @param deviceInfo The information of the device
-     * @param properties The properties of the plug
-     * @param coapClient A CoAP client that can be used to communicate with the plug using the IKEA TRÅDFRI gateway
+     * @param instanceId   The instance id of the plug
+     * @param deviceInfo   The information of the device
+     * @param properties   The properties of the plug
+     * @param coapClient   A CoAP client that can be used to communicate with the plug using the IKEA TRÅDFRI gateway
      * @since 1.0.0
      */
-    public Plug(String name, Long creationDate, Integer instanceId, DeviceInfo deviceInfo, PlugProperties properties, CoapClient coapClient){
+    public Plug(String name, Long creationDate, Integer instanceId, DeviceInfo deviceInfo, PlugProperties properties, CoapClient coapClient) {
         super(name, creationDate, instanceId, deviceInfo, coapClient);
         this.properties = properties;
         this.newProperties = new PlugProperties();
@@ -58,26 +60,31 @@ public class Plug extends Device {
 
     /**
      * Get the properties of the plug
+     *
      * @return The properties of the plug
      * @since 1.0.0
      */
     @Override
-    public PlugProperties getProperties(){
+    public PlugProperties getProperties() {
         return this.properties;
     }
 
     /**
      * Set the properties of the plug
+     *
      * @param properties The properties of the plug
      * @since 1.0.0
      */
     @Override
-    public void setProperties(DeviceProperties properties){
-        if(properties instanceof PlugProperties) this.properties = (PlugProperties) properties;
+    public void setProperties(DeviceProperties properties) {
+        if (properties instanceof PlugProperties) {
+            this.properties = (PlugProperties) properties;
+        }
     }
 
     /**
      * Get the on / off state of the plug
+     *
      * @return The on state of the plug (true for on, false for off)
      * @since 1.0.0
      */
@@ -87,6 +94,7 @@ public class Plug extends Device {
 
     /**
      * Update the on / off state of the plug in the update queue
+     *
      * @param on The new on / off state for the plug (true for on, false for off)
      * @since 1.0.0
      */
@@ -96,6 +104,7 @@ public class Plug extends Device {
 
     /**
      * Set the on / off state of the plug
+     *
      * @param on The new on / off state for the plug (true for on, false for off)
      * @return True if successfully updated the plug, false if not
      * @since 1.0.0
@@ -108,6 +117,7 @@ public class Plug extends Device {
 
     /**
      * Apply updates to the plug
+     *
      * @param newProperties The new properties to apply to the plug
      * @return True if successfully updated the plug, false if not
      * @since 1.0.0
@@ -121,6 +131,7 @@ public class Plug extends Device {
 
     /**
      * Apply the updates in the update queue to the plug
+     *
      * @return True if successfully updated the plug, false if not
      * @since 1.0.0
      */

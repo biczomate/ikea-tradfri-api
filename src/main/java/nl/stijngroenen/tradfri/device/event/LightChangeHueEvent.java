@@ -24,6 +24,7 @@ import nl.stijngroenen.tradfri.device.LightProperties;
 
 /**
  * The class that represents a light hue changed event that occurred to an IKEA TRÅDFRI light
+ *
  * @author Stijn Groenen
  * @version 1.0.0
  */
@@ -31,7 +32,8 @@ public class LightChangeHueEvent extends LightChangeEvent {
 
     /**
      * Construct the LightChangeHueEvent class
-     * @param light The light for which the event occurred
+     *
+     * @param light         The light for which the event occurred
      * @param oldProperties The old properties of the light (from before the event occurred)
      * @param newProperties The new properties of the light (from after the event occurred)
      * @since 1.0.0
@@ -42,19 +44,21 @@ public class LightChangeHueEvent extends LightChangeEvent {
 
     /**
      * Get the old hue of the light (from before the event occurred)
+     *
      * @return The old hue of the light
      * @since 1.0.0
      */
-    public int getOldHue(){
+    public int getOldHue() {
         return getOldProperties().getHue();
     }
 
     /**
      * Get the new hue of the light (from after the event occurred)
+     *
      * @return The new hue of the light
      * @since 1.0.0
      */
-    public int getNewHue(){
+    public int getNewHue() {
         return getNewProperties().getHue();
     }
 

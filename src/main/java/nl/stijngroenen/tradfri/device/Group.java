@@ -1,10 +1,10 @@
 package nl.stijngroenen.tradfri.device;
 
+import java.util.List;
+
 import nl.stijngroenen.tradfri.payload.GroupRequest;
 import nl.stijngroenen.tradfri.util.ApiEndpoint;
 import nl.stijngroenen.tradfri.util.CoapClient;
-
-import java.util.List;
 
 /**
  * The class that represents an IKEA TRÅDFRI group
@@ -181,6 +181,7 @@ public class Group {
 
     /**
      * Get the colour of the group in hexadecimals
+     *
      * @return The colour of the group in hexadecimals
      * @since 1.3.0
      */
@@ -195,6 +196,7 @@ public class Group {
      *     <li>RGB: {@link nl.stijngroenen.tradfri.util.ColourHex}</li>
      *     <li>Colour temperatures: {@link nl.stijngroenen.tradfri.util.ColourTemperatureHex}</li>
      * </ul>
+     *
      * @param colourHex The new colour for the group
      * @since 1.3.0
      */
@@ -209,6 +211,7 @@ public class Group {
      *     <li>RGB: {@link nl.stijngroenen.tradfri.util.ColourHex}</li>
      *     <li>Colour temperatures: {@link nl.stijngroenen.tradfri.util.ColourTemperatureHex}</li>
      * </ul>
+     *
      * @param colourHex The new colour for the group
      * @param transitionTime The transition time for updating the light
      * @return True if successfully updated the colour of the light, false if not
@@ -228,6 +231,7 @@ public class Group {
      *     <li>RGB: {@link nl.stijngroenen.tradfri.util.ColourHex}</li>
      *     <li>Colour temperatures: {@link nl.stijngroenen.tradfri.util.ColourTemperatureHex}</li>
      * </ul>
+     *
      * @param colourHex The new colour for the group
      * @return True if successfully updated the colour of the light, false if not
      * @since 1.3.0
